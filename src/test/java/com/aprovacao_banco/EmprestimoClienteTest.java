@@ -44,6 +44,7 @@ public class EmprestimoClienteTest
     @Test
     public void testeNaoLiberaEmprestimo()
     {
-        assertEquals("Não Libera", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 1000.00, false, false)));
+        Cliente cliente = new Cliente("Eidolas", 22, 1000.00, false, false);
+        assertEquals("Não Libera", emprestimoCliente.aprovaEmprestimo(cliente));
     }
 }
