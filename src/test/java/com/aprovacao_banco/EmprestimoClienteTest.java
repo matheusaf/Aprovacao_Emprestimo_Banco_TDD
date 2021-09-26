@@ -26,24 +26,24 @@ public class EmprestimoClienteTest
      * Para qualquer outro caso o cliente tem o empréstimo negado.
      **/
     @Test
-    public void testeLiberaEmprestimoSaldo()
+    public void testeLiberaEmprestimo()
     {
         // Saldo médio > 1000
-        Cliente cliente_eidolas = new Cliente("Eidolas", 22, 1000.01, false, false );
+        Cliente cliente_eidolas = new Cliente("Eidolas", 22, 1000.01, false, false);
         assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
         
         // Saldo médio < 1000 e bom histórico
-        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, true, false );
+        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, true, false);
         assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
         
         // Saldo médio < 1000, péssimo histórico e bom pagador
-        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, false, true );
+        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, false, true);
         assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
     }
 
     @Test
     public void testeNaoLiberaEmprestimo()
     {
-        assertEquals("Não Libera", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 100.00, false, false )));
+        assertEquals("Não Libera", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 1000.00, false, false)));
     }
 }
