@@ -19,6 +19,50 @@ public class EmprestimoClienteTest
     
      /**
      * Rigorous Test :-)
+     * 
+     * 
+     * 
+     * 
+     * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
      */
     @Test
     public void testeLiberaEmprestimo()
