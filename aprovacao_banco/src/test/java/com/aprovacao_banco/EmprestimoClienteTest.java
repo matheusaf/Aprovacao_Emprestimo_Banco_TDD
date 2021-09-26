@@ -21,6 +21,6 @@ public class EmprestimoClienteTest
     @Test
     public void testeLiberaEmprestimo()
     {
-        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(1000, true, true))
+        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(1000, true, true));
     }
 }
