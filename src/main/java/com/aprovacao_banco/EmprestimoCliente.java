@@ -32,4 +32,8 @@ public class EmprestimoCliente
     public String aprovaEmprestimo(Cliente c){
         return (_banco.getAprovacao(c)) ? "Libera Empréstimo" : "Não Libera";
     }
+
+    public static void main(String[] args){
+        System.out.println(new Cliente("Eidolas", 10, 2000.00, true, false).toString());
+    }
 }
