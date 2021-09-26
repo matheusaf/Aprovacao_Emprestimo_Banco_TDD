@@ -7,6 +7,9 @@ public class Banco {
 
 	public boolean getAprovacao(Cliente c)
 	{
-		return (c.getSaldo() > 1000 || c.getBomPagador() || c.getConcessao());
+		if (c.getSaldo() > 1000 || c.getBomPagador() || c.getConcessao()){
+            return true;
+		}
+        return false;
 	}
 }
