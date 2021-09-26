@@ -2,5 +2,5 @@ language: java
 jdk: openjdk11
 
 # Caso o build aconteca corretamente a analise de cobertura de teste e disparada
-# after_success:
-  # - bash <(curl -s https://codecov.io/bash)
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
