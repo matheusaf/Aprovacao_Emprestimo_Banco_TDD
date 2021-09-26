@@ -1,5 +1,5 @@
 # Aprovacao_Emprestimo_Banco_TDD
-POLÍTICA DE APROVAÇÃO DE EMPRÉSTIMO PARA CLIENTES DE UM BANCO
+Política de Aprovação de Empréstimo para Clientes de um Banco.
 
 [![Build Status](https://app.travis-ci.com/matheusaf/Aprovacao_Emprestimo_Banco_TDD.svg?token=QqpRiyzussq8vARyH5Jx&branch=main)](https://app.travis-ci.com/matheusaf/Aprovacao_Emprestimo_Banco_TDD)
 
