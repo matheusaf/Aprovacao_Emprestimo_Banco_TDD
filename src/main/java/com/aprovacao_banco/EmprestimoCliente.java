@@ -3,7 +3,7 @@ package com.aprovacao_banco;
 import com.aprovacao_banco.Banco.*;
 import com.aprovacao_banco.Cliente.*;
 
- /**
+/**
  * Hello world!
  *
  */
@@ -29,11 +29,13 @@ public class EmprestimoCliente
         _banco = b;
     }
 
-    public String aprovaEmprestimo(Cliente c){
+    public String aprovaEmprestimo(Cliente c)
+    {
         return (_banco.getAprovacao(c)) ? "Libera Empréstimo" : "Não Libera";
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         System.out.println(new Cliente("Eidolas", 10, 2000.00, true, false).toString());
     }
 }

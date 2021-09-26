@@ -7,7 +7,8 @@ public class Cliente {
         private boolean _bomPagador;
         private boolean _concessao;
 
-	public Cliente(String nome, int idade, double saldo, boolean bomPagador, boolean concessao) {
+	public Cliente(String nome, int idade, double saldo, boolean bomPagador, boolean concessao)
+        {
                 _nome = nome;
                 _idade = idade;
                 _saldo = saldo;
@@ -15,23 +16,28 @@ public class Cliente {
                 _concessao = concessao;
 	}
 
-        public String getNome(){
+        public String getNome()
+        {
                 return _nome;
         }
 
-        public int getIdade(){
+        public int getIdade()
+        {
                 return _idade;
         }
 
-        public double getSaldo(){
+        public double getSaldo()
+        {
                 return _saldo;
         }
 
-        public boolean getBomPagador(){
+        public boolean getBomPagador()
+        {
                 return _bomPagador;
         }
 
-        public boolean getConcessao(){
+        public boolean getConcessao()
+        {
                 return _concessao;
         }
 

@@ -18,6 +18,7 @@ public class EmprestimoClienteTest
      }
     
      /**
+     * Rigorous Test :-)
      * Um sistema bancário é utilizado para avaliar o cliente e determinar se um empréstimo pode ser liberado para ele. As regras para liberação do empréstimo são as seguintes:
      * O saldo médio deve ser maior que R$1000,00 mensais.
      * Mesmo se o saldo médio ser menor que o exigido, mas o cliente possuí um histórico de bom pagador o empréstimo também é liberado.
@@ -27,21 +28,22 @@ public class EmprestimoClienteTest
     @Test
     public void testeLiberaEmprestimoSaldo()
     {
-        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 1000.01, false, false )));
+        // Saldo médio > 1000
+        Cliente cliente_eidolas = new Cliente("Eidolas", 22, 1000.01, false, false );
+        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
+        
+        // Saldo médio < 1000 e bom histórico
+        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, true, false );
+        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
+        
+        // Saldo médio < 1000, péssimo histórico e bom pagador
+        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, false, true );
+        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
     }
 
     @Test
-    public void testeLiberaEmprestimoBomPagador() {
-        asserEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 100.00, true, false )));
-    }
-
-    @Test
-    public void testeLiberaEmprestimoConcessao(){
-        asserEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 100.00, false, true )));
-    }
-
-    @Test
-    public void testeNaoLiberaEmprestimo(){
-        asserEquals("Não Libera", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 100.00, false, false )));
+    public void testeNaoLiberaEmprestimo()
+    {
+        assertEquals("Não Libera", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 100.00, false, false )));
     }
 }
