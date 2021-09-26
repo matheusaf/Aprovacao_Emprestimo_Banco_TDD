@@ -37,7 +37,7 @@ public class EmprestimoClienteTest
         assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
         
         // Saldo médio < 1000, péssimo histórico e bom pagador
-        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, false, true);
+        cliente_eidolas = new Cliente("Eidolas", 22, 100.00, false, false);
         assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(cliente_eidolas));
     }
 
