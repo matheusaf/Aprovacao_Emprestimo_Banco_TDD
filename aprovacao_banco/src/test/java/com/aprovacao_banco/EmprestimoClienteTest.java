@@ -1,5 +1,7 @@
 package com.aprovacao_banco;
 
+import com.aprovacao_banco.Cliente.*;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -21,6 +23,6 @@ public class EmprestimoClienteTest
     @Test
     public void testeLiberaEmprestimo()
     {
-        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(1000, true, true));
+        assertEquals("Libera Empréstimo", emprestimoCliente.aprovaEmprestimo(new Cliente("Eidolas", 22, 1000.00, true, true )));
     }
 }

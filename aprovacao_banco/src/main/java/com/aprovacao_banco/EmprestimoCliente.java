@@ -1,21 +1,35 @@
 package com.aprovacao_banco;
 
+import com.aprovacao_banco.Banco.*;
+import com.aprovacao_banco.Cliente.*;
+
  /**
  * Hello world!
  *
  */
 public class EmprestimoCliente 
 {
-    public static void main( String[] args )
+    private Banco _banco;
+
+    public EmprestimoCliente(Banco banco)
     {
-        System.out.println( "Hello World!" );
+        _banco = banco;
     }
 
-    public String aprovaEmprestimo(double saldoMedio, boolean bomPagador, boolean  concessaoEspecial)
+    public EmprestimoCliente()
     {
-        if(saldoMedio > 1000){
-            return "Libera Empréstimo";
-        }
-        return "Não Libera";
+        _banco = new Banco();
+    }
+
+    public Banco getBanco(){
+        return _banco;
+    }
+
+    public void setBanco(Banco b){
+        _banco = b;
+    }
+
+    public String aprovaEmprestimo(Cliente c){
+        return (_banco.getAprovacao(c)) ? "Libera Empréstimo" : "Não Libera";
     }
 }
