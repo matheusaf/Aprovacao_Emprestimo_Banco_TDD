@@ -3,6 +3,8 @@ POLÍTICA DE APROVAÇÃO DE EMPRÉSTIMO PARA CLIENTES DE UM BANCO
 
 [![Build Status](https://app.travis-ci.com/matheusaf/Aprovacao_Emprestimo_Banco_TDD.svg?token=QqpRiyzussq8vARyH5Jx&branch=main)](https://app.travis-ci.com/matheusaf/Aprovacao_Emprestimo_Banco_TDD)
 
+[![codecov](https://codecov.io/gh/matheusaf/Aprovacao_Emprestimo_Banco_TDD/branch/main/graph/badge.svg?token=XWMY8Y2O33)](https://codecov.io/gh/matheusaf/Aprovacao_Emprestimo_Banco_TDD)
+
 • Desenvolver utilizando a técnica TDD
 • Montar os casos de teste utilizando o critério tabela de decisão e complementar com o critério baseado em casos de uso
 • Gerar os casos de teste
